@@ -1,10 +1,11 @@
-x=int(input())
-k=0
-while x!=0:
-    d=x%10
-    x=x//10
-    k=k+d
-    if k>9 and x==0:
-        x=k
-        k=0
-print(k)
+def add_digits(n):
+    s=0
+    while n>0:
+        r=n%10
+        s=s+r
+        n=n//10
+    return s
+a=int(input())
+while a>9:
+    a=add_digits(a)
+print(a)    
