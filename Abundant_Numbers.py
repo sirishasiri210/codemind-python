@@ -1,10 +1,10 @@
 n=int(input())
-x=[]
+f=[]
 for i in range(1,n):
-  if n%i==0:
-     x.append(i)
-c=sum(x)
-if c>n:
-   print("True")
+    if n%i==0:
+        f.append(i)
+k=sum(f)
+if k>n:
+    print("True")
 else:
-   print("False")    
+    print("False")
