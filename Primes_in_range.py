@@ -1,12 +1,17 @@
-def prime(a):
-    for i in range(2,int(a**0.5)+1):
-        if a%i==0:
+from math import sqrt
+def fun(x):
+    c=0
+    if x<2:
+        return 0
+    for j in range(2,int(sqrt(x))+1):
+        if x%j==0:
             return 0
     return 1
-a=int(input())
-b=int(input())
-c=0
-for n in range(a,b+1):
-    if prime(n)==1 and  n!=1:
-        c+=1
-print(c)
+            
+m=int(input())
+n=int(input())
+s=0
+for i in range(m,n+1):
+    if fun(i)==1:
+        s+=1
+print(s)
