@@ -1,19 +1,19 @@
-def prime(a):
+from math import sqrt
+def prime(x):
     c=0
-    if a!=1:
-        for i in range(2,a):
-            if(a%i)==0:
-                c=1
-                break
-    if c==0:
-        return 0
-    else:
-        return 1
+    if x<2:
+        return False
+    for j in range(2,int(sqrt(x))+1):
+        if x%j==0:
+            return False
+    return True
 n=int(input())
 m=int(input())
-s=n+m+1
-c=1
-while prime(s):
-    s+=1
-    c+=1
-print(c)
+v=n+m
+s=n+m
+while True:
+    s=s+1
+    if prime(s):
+        v=s-v
+        print(v)
+        break
